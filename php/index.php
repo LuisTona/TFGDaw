@@ -18,6 +18,7 @@
                 $info = "SELECT name, email FROM users WHERE name = '$nombre' OR email = '$mail' ";
                 $result = $con->query($info);
                 $users = $result->fetch_assoc();
+                echo ($result->num_rows);
                 if($users['name'] != null ){
                     header("HTTP/1.1 405 Duplicate username");
                     die();

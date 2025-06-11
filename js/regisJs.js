@@ -15,16 +15,16 @@ let campo = [
 
 // Validaciones del nombre
 nombre.addEventListener("blur", () => {
-  validacionExpresiones(nombre, nombreExp, 0);
+  validacionExpresiones(nombre, nombreExp, 1);
 });
 
 // Validaciones del correo
 correo.addEventListener("blur", () => {
-  validacionExpresiones(correo, regExp, 2);
+  validacionExpresiones(correo, regExp, 3);
 });
 
 contraseña.addEventListener("blur", () => {
-  validacionExpresiones(contraseña, passExp, 4);
+  validacionExpresiones(contraseña, passExp, 5);
 });
 
 if (formRegis) {
@@ -49,19 +49,13 @@ if (formRegis) {
         },
         body: JSON.stringify(data),
       };
-      fetch("./php/index.php", options)
-        .then((res) => {
-          if (res.status === 201) {
-            return res.json();
-          } else {
-            manejadorErrores(valido);
-          }
-        })
-        .then((data) => {
-          if (data) {
-            window.location.href = "login.html";
-          }
-        });
+      fetch("./php/index.php", options).then((res) => {
+        if (res.status === 201) {
+          window.location.href = "./index.html";
+        } else {
+          manejadorErrores(valido);
+        }
+      });
     }
   });
 }
@@ -69,6 +63,7 @@ if (formRegis) {
 function validacionExpresiones(elemento, expresion, numError) {
   if (elemento.value.trim() === "") {
     elemento.classList.add("incorrecto");
+    console.log(errorMensaje);
     errorMensaje[numError].style.display = "block";
     errorMensaje[numError + 1].style.display = "none";
     return false;
