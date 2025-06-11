@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="../imagenes/2v3Fq6upJIyETNZTQsYudu5iL3O.svg"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>GoHabits</title>
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/add.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./home.html">
+        <img src="../imagenes/2v3Fq6upJIyETNZTQsYudu5iL3O.svg" alt="GoHabits" />
+      </a>
+    </header>
+    <main>
+      <div class="containerAside">
+        <aside id="aside">
+          <div class="asideContent" id="home">
+            <img src="../imagenes/home.svg" alt="home" />
+            <div class="identificadorAside">Inicio</div>
+          </div>
+          <div class="asideContent" id="add">
+            <img src="../imagenes/add.svg" alt="add" />
+            <div class="identificadorAside">Agregar habito</div>
+          </div>
+          <div class="asideContent" id="habitos">
+            <img src="../imagenes/trending.svg" alt="habitos" />
+            <div class="identificadorAside">Habitos</div>
+          </div>
+          <div class="asideContent" id="buscar">
+            <img src="../imagenes/search.svg" alt="buscar" />
+            <div class="identificadorAside">Buscar</div>
+          </div>
+          <div class="asideContent" id="perfil">
+            <img
+              src="../imagenes/defaultImage.jpg"
+              alt="Perfil"
+              id="userImage"
+            />
+            <div class="identificadorAside">Perfil</div>
+          </div>
+          <div class="asideContent" id="logout">
+            <img src="../imagenes/logout.svg" alt="Cerrar Sesion" />
+            <div class="identificadorAside">Cerrar sesion</div>
+          </div>
+        </aside>
+        <section id="searchSection">
+          <h2>Busqueda</h2>
+          <form id="searchInput">
+            <input type="text" id="searchBar" placeholder="Buscar..." />
+          </form>
+          <div id="btnSearch">
+            <img src="../imagenes/search.svg" alt="buscar" />
+          </div>
+          <div id="userEncontrado"></div>
+        </section>
+      </div>
+      <div class="content">
+        <h1>Agregar un nuevo habito</h1>
+        <div class="form-container">
+          <p>
+            Paso <span id="stepActual"></span> de <span id="maxSteps"></span>
+          </p>
+          <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+
+          <form id="habitForm">
+            <!-- Paso 1 -->
+            <div class="step active">
+              <h2>1. Selecciona un hábito</h2>
+              <select name="habito" id="habitSelect" required>
+                <option value="">-- Selecciona --</option>
+              </select>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="step">
+              <h2>3. Establece duración diaria</h2>
+              <label
+                >¿Cuánto tiempo dedicarás al hábito por día?(En minutos)</label
+              >
+              <input
+                type="number"
+                name="duracion"
+                placeholder="En minutos"
+                required
+                min="5"
+                max="300"
+              />
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="step">
+              <h2>4. Frecuencia semanal</h2>
+              <label>¿Cuántos días a la semana practicarás este hábito?</label>
+              <input
+                type="number"
+                name="frecuencia"
+                placeholder="Ej: 5"
+                min="1"
+                max="7"
+                required
+              />
+            </div>
+            <p class="error" id="error">
+              Ha ocurrido un error vuelva a intentarlo
+            </p>
+            <div class="form-buttons">
+              <button type="button" id="prevBtn" disabled>Anterior</button>
+              <button type="button" id="nextBtn">Siguiente</button>
+              <button type="button" id="myDialog">Finalizar</button>
+            </div>
+          </form>
+          <dialog id="publicacion">
+            <div id="formDialog">
+              <h2>Se ha guardado con exito ¿quieres publicarlo?</h2>
+              <textarea
+                name="comentario"
+                id="comentario"
+                cols="30"
+                rows="5"
+              ></textarea>
+              <form method="dialog">
+                <button type="button" id="cerrar">Cerrar</button>
+                <button type="button" id="publicar">Compartir</button>
+              </form>
+            </div>
+            <div id="correcto" class="oculto">
+              <h3>
+                <img src="../imagenes/check.svg" alt="correcto" />
+                Se ha guardado con exito
+              </h3>
+              <button id="volver">Volver</button>
+            </div>
+            <div id="incorrecto" class="oculto">
+              <img src="../imagenes/dangerous.svg" alt="incorrecto" />
+            </div>
+          </dialog>
+        </div>
+      </div>
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/add.js"></script>
+  </body>
+</html>

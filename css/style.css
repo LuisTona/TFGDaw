@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#50d9ffa6 38%, #00bc6a5e 56%);
+  & img {
+    width: 400px;
+    margin-bottom: -75px;
+    margin-top: -75px;
+  }
+}
+.log {
+  width: 20%;
+  min-width: 300px;
+  max-height: 700px;
+  padding: 35px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.445);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.582);
+  & .logForm,
+  .registerForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  & h1 {
+    margin: 15px;
+  }
+
+  & form {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & input,
+    button {
+      width: 250px;
+      border: none;
+      margin: 10px 0px;
+      padding: 5px;
+      border-radius: 15px;
+    }
+    & label {
+      margin-top: 15px;
+    }
+    & input:focus {
+      background-color: rgba(121, 173, 165, 0.534);
+    }
+    & button {
+      width: 150px;
+    }
+    & .error-message {
+      color: red;
+      font-size: 10px;
+      display: none;
+    }
+    & p {
+      margin: 0px;
+    }
+
+    & .error {
+      border: 2px solid red;
+    }
+
+    & #enviar {
+      cursor: pointer;
+    }
+
+    & .incorrecto {
+      border: solid 1px red;
+    }
+  }
+  & .register {
+    font-size: 12px;
+    align-self: center;
+    text-align: center;
+  }
+}
+
+.noneDisplay {
+  display: none;
+}

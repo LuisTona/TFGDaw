@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="./css/style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./imagenes/2v3Fq6upJIyETNZTQsYudu5iL3O.svg"
+      type="image/png"
+    />
+    <title>GoHabits</title>
+  </head>
+  <body>
+    <div class="content">
+      <img src="./imagenes/2v3Fq6upJIyETNZTQsYudu5iL3O.svg" alt="" />
+      <div class="log" id="form">
+        <div id="logForm">
+          <form action="" method="post" id="logFormulario">
+            <h1>Login</h1>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" />
+            <label for="logPass">Contraseña</label>
+            <input type="password" name="logPass" id="logPass" />
+            <div id="errorLog" class="error-message">
+              <p>
+                Ha ocurrido un error asegurese que los datos estan bien
+                introducidos
+              </p>
+            </div>
+            <button id="login" type="submit">Entrar</button>
+          </form>
+          <p class="register">
+            ¿Aun no estas registrado?
+            <a href="#" id="btnRegisterForm">REGISTRATE AQUI</a>
+          </p>
+        </div>
+        <div id="registerForm" class="noneDisplay">
+          <form action="" id="registerFormulario">
+            <h1>Register</h1>
+            <label for="nombre">Nombre <span>(obligatorio)</span>*</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              aria-describedby="nombre-errorObligatorio nombre-formatoIncorrecto"
+            />
+            <div id="nombre-errorObligatorio" class="error-message">
+              <p>Nombre obligatorio</p>
+            </div>
+            <div id="nombre-formatoIncorrecto" class="error-message">
+              <p>El nombre no admite numeros</p>
+            </div>
+
+            <label for="mail"
+              >Correo electronico <span>(obligatorio)</span>*</label
+            >
+            <input
+              type="text"
+              name="correo"
+              id="mail"
+              aria-describedby="mail-errorObligatorio mail-formatoIncorrecto"
+            />
+            <div id="mail-errorObligatorio" class="error-message">
+              <p>Correo obligatorio</p>
+            </div>
+            <div id="mail-formatoIncorrecto" class="error-message">
+              <p>Correo incorrecto</p>
+            </div>
+
+            <label for="pass">Contraseña <span>(obligatorio)</span>*</label>
+            <input type="password" name="pass" id="pass" />
+            <div id="pass-errorObligatorio" class="error-message">
+              <p>Contraseña obligatoria</p>
+            </div>
+            <div id="pass-formatoIncorrecto" class="error-message">
+              <p>Contraseña incorrecta, debe contenter al menos 8 carácteres</p>
+            </div>
+            <button id="register" type="submit">Registrarse</button>
+          </form>
+          <p class="register">
+            ¿Ya estas registrado registrado?
+            <a href="#" id="btnLoginForm">INICIA SESION AQUI</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/logJs.js"></script>
+    <script src="./js/regisJs.js"></script>
+    <script></script>
+  </body>
+</html>

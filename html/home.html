@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="../imagenes/2v3Fq6upJIyETNZTQsYudu5iL3O.svg"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>GoHabits</title>
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/estilosGenerales.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./home.html">
+        <img src="../imagenes/2v3Fq6upJIyETNZTQsYudu5iL3O.svg" alt="GoHabits" />
+      </a>
+    </header>
+    <main>
+      <div class="containerAside">
+        <aside id="aside">
+          <div class="asideContent" id="home">
+            <img src="../imagenes/home.svg" alt="home" />
+            <div class="identificadorAside">Inicio</div>
+          </div>
+          <div class="asideContent" id="add">
+            <img src="../imagenes/add.svg" alt="add" />
+            <div class="identificadorAside">Agregar habito</div>
+          </div>
+          <div class="asideContent" id="habitos">
+            <img src="../imagenes/trending.svg" alt="habitos" />
+            <div class="identificadorAside">Habitos</div>
+          </div>
+          <div class="asideContent" id="buscar">
+            <img src="../imagenes/search.svg" alt="buscar" />
+            <div class="identificadorAside">Buscar</div>
+          </div>
+          <div class="asideContent" id="perfil">
+            <img
+              src="../imagenes/defaultImage.jpg"
+              alt="Perfil"
+              id="userImage"
+            />
+            <div class="identificadorAside">Perfil</div>
+          </div>
+          <div class="asideContent" id="logout">
+            <img src="../imagenes/logout.svg" alt="Cerrar Sesion" />
+            <div class="identificadorAside">Cerrar sesion</div>
+          </div>
+        </aside>
+        <section id="searchSection">
+          <h2>Busqueda</h2>
+          <form id="searchInput">
+            <input type="text" id="searchBar" placeholder="Buscar..." />
+          </form>
+          <div id="btnSearch">
+            <img src="../imagenes/search.svg" alt="buscar" />
+          </div>
+          <div id="userEncontrado"></div>
+        </section>
+      </div>
+      <div id="content">
+        <h3 id="bienvenida">
+          Bienvenido, empieza con tus habitos o a seguir a tus amigos, para ver
+          que habitos siguen! <br />Pulsa en agregar habito para crear tus
+          habitos
+        </h3>
+      </div>
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/home.js"></script>
+  </body>
+</html>

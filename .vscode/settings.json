@@ -1,0 +1,36 @@
+{
+    // ✅ Formato automático con Prettier
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  
+    // ✅ HTML y CSS
+    "html.format.enable": true,
+    "css.validate": true,
+  
+    // ✅ Emmet activo en archivos adicionales
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "vue-html": "html",
+      "plaintext": "html"
+    },
+  
+    // ✅ Live Server: espera un poco y abre navegador
+    "liveServer.settings.wait": 500,
+    "liveServer.settings.NoBrowser": false,
+  
+    // ✅ IntelliSense CSS: sugerencias en HTML
+    "css.classCompletion.enable": true,
+  
+    // ✅ Archivos y experiencia general
+    "files.autoSave": "onWindowChange",
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+  
+    // ✅ Bracket Pair Colorizer
+    "editor.bracketPairColorization.enabled": true,
+  
+    // ✅ Snippets: permite que usen tab para activarse
+    "editor.snippetSuggestions": "top"
+  }
