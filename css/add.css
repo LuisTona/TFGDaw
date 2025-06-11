@@ -150,3 +150,14 @@ dialog {
 .visible {
   display: block;
 }
+@media (max-width: 1020px) {
+  .content {
+    margin-top: 200px !important;
+    height: 100%;
+  }
+}
+@media (max-width: 640px) {
+  h1 {
+    font-size: 25px;
+  }
+}

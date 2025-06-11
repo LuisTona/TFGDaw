@@ -37,10 +37,7 @@ function render(data) {
 
   data.forEach((element) => {
     //Donde va todo el contenido de los habitos
-    let habito = createElements("div", "", "habitoMostrado");
-
-    habito.append(createHabitoElements(element));
-    listaHabitos.append(habito);
+    listaHabitos.append(createHabitoElements(element));
   });
 }
 
